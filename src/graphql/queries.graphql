@@ -1,0 +1,30 @@
+# this is an auto generated file. This will be overwritten
+query GetLink($id: ID!) {
+  getLink(id: $id) {
+    id
+    name
+    description
+    target
+    icon
+    linkType
+    requiresElevatedPrivledges
+  }
+}
+query ListLinks(
+  $filter: ModelLinkFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listLinks(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      description
+      target
+      icon
+      linkType
+      requiresElevatedPrivledges
+    }
+    nextToken
+  }
+}

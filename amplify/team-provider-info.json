@@ -1,0 +1,20 @@
+{
+    "local": {
+        "awscloudformation": {
+            "AuthRoleName": "amplify-tmla-local-110531-authRole",
+            "UnauthRoleArn": "arn:aws:iam::904368838039:role/amplify-tmla-local-110531-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::904368838039:role/amplify-tmla-local-110531-authRole",
+            "Region": "us-west-2",
+            "DeploymentBucketName": "amplify-tmla-local-110531-deployment",
+            "UnauthRoleName": "amplify-tmla-local-110531-unauthRole",
+            "StackName": "amplify-tmla-local-110531",
+            "StackId": "arn:aws:cloudformation:us-west-2:904368838039:stack/amplify-tmla-local-110531/5d290460-2680-11ea-b1bd-0a73b7e234e0",
+            "AmplifyAppId": "d1y7lyg8siunn2"
+        },
+        "categories": {
+            "auth": {
+                "tmlafdd4e000": {}
+            }
+        }
+    }
+}

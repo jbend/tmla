@@ -1,0 +1,15 @@
+type Link @model{
+  id: ID!
+  name: String!
+  description: String
+  target: String!
+  icon: String
+  linkType: LinkType!
+  requiresElevatedPrivledges: Boolean
+}
+
+enum LinkType {
+  APPLICATION,
+  URL,
+  FOLDER
+}
