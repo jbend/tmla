@@ -17,9 +17,6 @@ export class LinksComponent implements OnInit {
   @Select(LinkState.getLinks)
   public links$: Observable<Link[]>;
 
-  // @Select(ModalState.getIsAddLinkShowing)
-  // public addLinkShowing$: Observable<boolean>;
-
   constructor(private store: Store) { }
 
   ngOnInit() {
