@@ -1,0 +1,21 @@
+<div class="clr-row">
+  <div class="clr-col-lg-5 clr-col-md-8 clr-col-12">
+      <div class="card">
+          <div class="card-header">
+              {{ link.name }}
+          </div>
+          <div class="card-block">
+              <!-- <div class="card-title">
+                  {{ link.name }}
+              </div> -->
+              <div class="card-text">
+                  {{ link.description }}
+              </div>
+          </div>
+          <div class="card-footer">
+              <button class="btn btn-sm btn-link" (click)="delete()">Delete</button>
+              <button class="btn btn-sm btn-link" (click)="edit()">Edit</button>
+          </div>
+      </div>
+  </div>
+</div>

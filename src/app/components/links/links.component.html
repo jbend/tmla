@@ -1,0 +1,11 @@
+<div class="content-area">
+  <button (click)="showAddLink()" class="btn btn-primary">Add Application</button>
+</div>
+
+<div class="link-list" *ngFor="let link of links$ | async">
+  <app-link-card [link]="link">
+  </app-link-card>
+</div>
+
+<!-- Add application dialog -->
+<app-add-link></app-add-link>

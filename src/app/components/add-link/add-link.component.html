@@ -1,0 +1,78 @@
+<!-- App application modal -->
+<clr-modal [clrModalOpen]="isAddLinkShowing$ | async">
+  <h3 class="modal-title">Add Application</h3>
+  <div class="modal-body">
+
+    <form clrForm [formGroup]="addLinkForm">
+      <clr-input-container>
+        <label>Name</label>
+        <input 
+          clrInput 
+          autofocus
+          class="add-input"
+          formControlName="name"/>
+          <clr-control-helper>The name of the application</clr-control-helper>
+          <clr-control-error>You must have have a name</clr-control-error>  
+      </clr-input-container>
+
+      <clr-textarea-container>
+        <label>Description</label>
+        <textarea 
+          clrTextarea 
+          class="add-input"
+          formControlName="description"></textarea>
+          <clr-control-helper>Description not required but it a good idea to have a description</clr-control-helper>
+      </clr-textarea-container>
+
+      <clr-input-container>
+        <label>Target</label>
+        <input 
+          clrInput 
+          class="add-input"
+          formControlName="description"/>
+          <clr-control-helper>TruckMate exe file or url</clr-control-helper>
+          <clr-control-error>This cannot be blank</clr-control-error>  
+      </clr-input-container>
+
+      <clr-input-container>
+        <label>Icon</label>
+        <input 
+          clrInput
+          class="add-input"/>
+          <clr-control-helper>Name of image to use</clr-control-helper>
+      </clr-input-container>
+
+      <clr-select-container>
+        <label>Link Type</label>
+        <select clrSelect formControlName="linkType">
+          <option value="application" selected>Application</option>
+          <option value="url">URL</option>
+          <option value="folder">Folder</option>
+        </select>
+        <clr-control-helper>The name of the application</clr-control-helper>
+        <clr-control-error>You must have have a name</clr-control-error>  
+    </clr-select-container>
+
+    </form>
+    <!-- <div>Form Value: {{ addApplicationForm.value | json }}</div> -->
+    <!-- <div>Form Status: {{ addApplicationForm.status }}</div> -->
+
+  </div>
+  <div class="modal-footer">
+      <button 
+        type="button" 
+        class="btn btn-outline" 
+        (click)="cancelAddApplication()">Cancel</button>
+      <button 
+        type="button" 
+        class="btn btn-primary" 
+        [disabled]="!addLinkForm.valid"
+        (click)="addApplication()">Ok</button>
+
+      <!-- <button 
+        type="submit" 
+        class="btn btn-primary"
+        [disabled]="!addApplicationForm.valid">Submit</button> -->
+  </div>
+
+</clr-modal>
