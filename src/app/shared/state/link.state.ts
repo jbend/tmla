@@ -2,7 +2,9 @@ import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { Link } from '../models';
 import { artAdmin, dispatch, customerService} from '../data';
 
-import { FetchLink, FetchLinkFailure, FetchLinkSuccess,
+import { 
+  FetchLink, FetchLinkFailure, FetchLinkSuccess,
+  CreateLink, CreateLinkSuccess, CreateLinkFailure,
   DeleteLink, EditLink } from './link.actions';
 
 export interface LinkStateModel {
@@ -24,6 +26,21 @@ export class LinkState {
   @Selector()
   static getLinks(state: LinkStateModel) {
     return state.links;
+  }
+
+  @Action(CreateLink)
+  createLink(context: StateContext<LinkStateModel>, { payload }: CreateLink) {
+    console.log(payload);
+  }
+
+  @Action(CreateLinkSuccess)
+  createLinkSuccess(context: StateContext<LinkStateModel>, { payload }: CreateLinkSuccess) {
+    console.log(payload);
+  }
+
+  @Action(CreateLinkFailure)
+  createLinkFailure(context: StateContext<LinkStateModel>, { payload }: CreateLinkFailure ) {
+    console.error(payload);
   }
 
   @Action(FetchLink)

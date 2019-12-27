@@ -32,7 +32,7 @@ export const states = [
 
 export const storageKeys = [
   'app',
-  'link',
+  'links',
   'modal'
 ];
 
