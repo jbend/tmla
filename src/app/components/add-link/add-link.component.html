@@ -1,9 +1,10 @@
 <!-- App application modal -->
 <clr-modal [clrModalOpen]="isAddLinkShowing$ | async">
-  <h3 class="modal-title">Add Application</h3>
+  <h3 class="modal-title">Add Link</h3>
   <div class="modal-body">
 
     <form clrForm [formGroup]="addLinkForm">
+
       <clr-input-container>
         <label>Name</label>
         <input 
@@ -52,11 +53,9 @@
         </select>
         <clr-control-helper>The name of the application</clr-control-helper>
         <clr-control-error>You must have have a name</clr-control-error>  
-    </clr-select-container>
+      </clr-select-container>
 
     </form>
-    <!-- <div>Form Value: {{ addApplicationForm.value | json }}</div> -->
-    <!-- <div>Form Status: {{ addApplicationForm.status }}</div> -->
 
   </div>
   <div class="modal-footer">
@@ -69,7 +68,6 @@
         class="btn btn-primary" 
         [disabled]="!addLinkForm.valid"
         (click)="addApplication()">Ok</button>
-
   </div>
 
 </clr-modal>

@@ -37,7 +37,6 @@ export class AddLinkComponent implements OnInit {
   }
 
   addApplication() {
-    console.log('addApplicationForm', this.addLinkForm.value);
     this.store.dispatch(new CreateLink({
       name: this.addLinkForm.value.name,
       description: this.addLinkForm.value.description,
