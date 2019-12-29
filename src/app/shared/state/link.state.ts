@@ -2,10 +2,8 @@ import { State, Action, StateContext, Selector } from '@ngxs/store';
 import { Link } from '../models';
 import { artAdmin, dispatch, customerService} from '../data';
 
-import { 
-  FetchLink, FetchLinkFailure, FetchLinkSuccess,
-  CreateLink, CreateLinkSuccess, CreateLinkFailure,
-  DeleteLink, EditLink } from './link.actions';
+import { FetchLink, FetchLinkFailure, FetchLinkSuccess,
+  DeleteLink, EditLink, CreateLink, CreateLinkSuccess, CreateLinkFailure } from './link.actions';
 
 export interface LinkStateModel {
   links: Link[];
@@ -45,7 +43,7 @@ export class LinkState {
 
   @Action(FetchLink)
   fetchLinks({ dispatch }: StateContext<LinkStateModel> ) {
-    // dispatch(new FetchLinkSuccess(defaults))
+    dispatch(new FetchLinkSuccess({defaults}));
     // this.kpiService.fetchMyPages().subscribe(
     //   (pages: Page[]) => dispatch(new FetchMyPagesSuccess(pages)),
     //   error => dispatch(new FetchMyPagesFailure(error))

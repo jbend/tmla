@@ -15,13 +15,13 @@ import { ShellComponent } from './containers/shell/shell.component';
 import { AddLinkComponent } from './components/add-link/add-link.component';
 import { LinksComponent } from './components/links/links.component';
 import { PageNotFoundComponent } from './containers/page-not-found/page-not-found.component';
+import { LinkCardComponent } from './components/link-card/link-card.component';
 
 import { RoutingModule } from './app.routing';
 
 import { AppState, LinkState, ModalState } from './shared/state';
 
 import { environment } from '../environments/environment';
-import { LinkCardComponent } from './components/link-card/link-card.component';
 
 
 export const states = [
