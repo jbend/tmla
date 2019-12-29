@@ -19,7 +19,6 @@
     "@angular/platform-browser": "~8.2.14",
     "@angular/platform-browser-dynamic": "~8.2.14",
     "@angular/router": "^8.2.14",
-    "@aws-amplify/api": "^2.1.2",
     "@clr/angular": "^2.3.4",
     "@clr/icons": "2.3.4",
     "@clr/ui": "2.3.4",

@@ -3,7 +3,7 @@ import { Link } from '../models';
 import { artAdmin, dispatch, customerService} from '../data';
 
 import { FetchLink, FetchLinkFailure, FetchLinkSuccess,
-  DeleteLink, EditLink } from './link.actions';
+  DeleteLink, EditLink, CreateLink, CreateLinkSuccess, CreateLinkFailure } from './link.actions';
 
 export interface LinkStateModel {
   links: Link[];
@@ -26,9 +26,24 @@ export class LinkState {
     return state.links;
   }
 
+  @Action(CreateLink)
+  createLink(context: StateContext<LinkStateModel>, { payload }: CreateLink) {
+    console.log(payload);
+  }
+
+  @Action(CreateLinkSuccess)
+  createLinkSuccess(context: StateContext<LinkStateModel>, { payload }: CreateLinkSuccess) {
+    console.log(payload);
+  }
+
+  @Action(CreateLinkFailure)
+  createLinkFailure(context: StateContext<LinkStateModel>, { payload }: CreateLinkFailure ) {
+    console.error(payload);
+  }
+
   @Action(FetchLink)
   fetchLinks({ dispatch }: StateContext<LinkStateModel> ) {
-    // dispatch(new FetchLinkSuccess(defaults))
+    dispatch(new FetchLinkSuccess({defaults}));
     // this.kpiService.fetchMyPages().subscribe(
     //   (pages: Page[]) => dispatch(new FetchMyPagesSuccess(pages)),
     //   error => dispatch(new FetchMyPagesFailure(error))
