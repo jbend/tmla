@@ -38,6 +38,8 @@ export class FetchLinkFailure {
   constructor(public payload: any) {}
 }
 
+
+
 export class EditLink {
   static readonly type = '[LINK] Edit Link';
   constructor(public payload: Link) {}
